@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="HWChart1"/>
+        <attribute name="authors" value="splat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-02-03 03:32:39 PM"/>
+        <attribute name="created" value="c3BsYXQ7U1BFQ1RSRVBDOzIwMjUtMDItMDM7MDM6MDY6MTQgUE07MjUwMQ=="/>
+        <attribute name="edited" value="c3BsYXQ7U1BFQ1RSRVBDOzIwMjUtMDItMDM7MDM6MzI6MzkgUE07NTsyNjE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Created by Seth Adams, Sarah Lanigan, and Dorjee Tsewang"/>
+            <declare name="tuition, credits" type="Integer" array="False" size=""/>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="activityFee" type="Boolean" array="False" size=""/>
+            <output expression="&quot;How many credits are you taking? &quot;" newline="True"/>
+            <input variable="credits"/>
+            <if expression="credits &gt;= 12">
+                <then>
+                    <assign variable="tuition" expression="credits * 580 + 650 + 250"/>
+                </then>
+                <else>
+                    <output expression="&quot;Do you want to pay the activity fee? (Yes/No)&quot;" newline="True"/>
+                    <input variable="response"/>
+                    <if expression="response == &quot;Yes&quot;">
+                        <then>
+                            <assign variable="activityFee" expression="True"/>
+                        </then>
+                        <else>
+                            <assign variable="activityFee" expression="false"/>
+                        </else>
+                    </if>
+                    <if expression="activityFee == true">
+                        <then>
+                            <assign variable="tuition" expression="credits * 580 + 650 + 250"/>
+                        </then>
+                        <else>
+                            <assign variable="tuition" expression="credits * 580 + 650"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Your tuition will cost $&quot; &amp; tuition" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
