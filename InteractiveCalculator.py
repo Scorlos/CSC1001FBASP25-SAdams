@@ -18,19 +18,23 @@ def calculator ():
     if (selection == 1):
         num1 = int(input("Enter an integer: "));
         num2 = int(input("Enter another integer: "));
-        print("The sum is " & str(addCalc(num1, num2)));
+        print("The sum is" , addCalc(num1, num2));
+        return;
     if (selection == 2):
         num1 = int(input("Enter an integer: "));
         num2 = int(input("Enter another integer: "));
-        print("The difference is " & str(subCalc(num1, num2)));
+        print("The difference is" , subCalc(num1, num2));
+        return;
     if (selection == 3):
         num1 = int(input("Enter an integer: "));
         num2 = int(input("Enter another integer: "));
-        print("The product is " & str(multCalc(num1, num2)));
+        print("The product is" , multCalc(num1, num2));
+        return;
     else:
         num1 = int(input("Enter an integer: "));
         num2 = int(input("Enter another integer: "));
-        print("The quotient is " & str(divCalc(num1, num2)));
+        print("The quotient is" , divCalc(num1, num2));
+        return;
 print("Welcome to the Calculator!");
 calculator();
 exit();
